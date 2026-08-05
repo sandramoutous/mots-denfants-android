@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- app/src/main/res/drawable/ic_launcher_foreground.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Bande extérieure — terracotta -->
+    <path
+        android:fillColor="#E06C4A"
+        android:pathData="M25,68.5 A29,29 0 0 1 83,68.5 L77.71,68.5 A23.71,23.71 0 0 0 30.29,68.5 Z" />
+
+    <!-- Bande médiane — jaune -->
+    <path
+        android:fillColor="#F2C14E"
+        android:pathData="M30.29,68.5 A23.71,23.71 0 0 1 77.71,68.5 L72.41,68.5 A18.41,18.41 0 0 0 35.59,68.5 Z" />
+
+    <!-- Bande intérieure — bleu -->
+    <path
+        android:fillColor="#3A6EA5"
+        android:pathData="M35.59,68.5 A18.41,18.41 0 0 1 72.41,68.5 L67.11,68.5 A13.11,13.11 0 0 0 40.89,68.5 Z" />
+</vector>
