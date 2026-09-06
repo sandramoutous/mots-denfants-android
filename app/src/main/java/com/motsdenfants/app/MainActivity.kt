@@ -2,17 +2,19 @@ package com.motsdenfants.app
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import dev.hotwire.core.config.Hotwire
+import dev.hotwire.core.turbo.webview.HotwireWebView
 import dev.hotwire.navigation.activities.HotwireActivity
 import dev.hotwire.navigation.navigator.NavigatorConfiguration
 import dev.hotwire.navigation.util.applyDefaultImeWindowInsets
 
 class MainActivity : HotwireActivity(), MicrophonePermissionRequester {
-
     private var pendingCallback: ((Boolean) -> Unit)? = null
 
     private val micLauncher = registerForActivityResult(
@@ -23,6 +25,11 @@ class MainActivity : HotwireActivity(), MicrophonePermissionRequester {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Hotwire.config.makeCustomWebView = { context ->
+            HotwireWebView(context, null).apply {
+                setBackgroundColor(Color.parseColor("#FAF3EA"))
+            }
+        }
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
